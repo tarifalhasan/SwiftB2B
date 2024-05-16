@@ -28,13 +28,14 @@ const config = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        header: "rgba(0, 0, 0, 0.40)",
         primary: {
-          DEFAULT: "hsl(var(--primary))",
+          DEFAULT: "hsla(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
+          foreground: "hsla(var(--secondary-foreground))",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -46,7 +47,7 @@ const config = {
         },
         accent: {
           DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
+          foreground: "hsla(var(--accent-foreground))",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
@@ -71,6 +72,9 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+      },
+      boxShadow: {
+        sm: "0px 0px 16px 0px rgba(0, 0, 0, 0.24)",
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",

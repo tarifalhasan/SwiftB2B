@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 import { Poppins as FontSans } from "next/font/google";
 
+import SiteHeader from "@/components/header/header";
 import { cn } from "@/lib/utils";
 import { ReactNode } from "react";
 
@@ -24,6 +25,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           fontSans.variable
         )}
       >
+        <SiteHeader />
         {children}
       </body>
     </html>
