@@ -73,4 +73,7 @@
   body {
     @apply bg-background text-foreground;
   }
+  p {
+    @apply text-[#2F333D] text-sm lg:text-xl font-normal leading-[140%];
+  }
 }
