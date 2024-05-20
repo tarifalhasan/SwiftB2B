@@ -18,7 +18,7 @@ interface Card {
   image: ImageProps;
 }
 const Section2 = ({ data }: Readonly<Props>) => {
-  console.dir(data, { depth: null });
+  // console.dir(data, { depth: null });
   return (
     <section className=" py-10 space-y-5 lg:space-y-10 container max-w-[796px]">
       <div>

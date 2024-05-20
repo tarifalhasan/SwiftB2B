@@ -43,9 +43,19 @@ export async function getHomePageData() {
               },
             },
           },
+          BackgroundImage: {
+            fields: ["url", "alternativeText"],
+          },
           Section3Card: {
             populate: {
               icon: {
+                fields: ["url", "alternativeText"],
+              },
+            },
+          },
+          PeopleCard: {
+            populate: {
+              image: {
                 fields: ["url", "alternativeText"],
               },
             },

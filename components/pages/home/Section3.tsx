@@ -15,7 +15,7 @@ interface Section3Card {
   id: string;
 }
 const Section3 = ({ data }: Readonly<Props>) => {
-  console.dir(data, { depth: null });
+  // console.dir(data, { depth: null });
   return (
     <section className=" py-10 space-y-5 lg:space-y-10 container ">
       <div className=" max-w-[875px] block mx-auto">
@@ -23,7 +23,7 @@ const Section3 = ({ data }: Readonly<Props>) => {
           {data.title}
         </h2>
       </div>
-      <div className=" grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-10">
+      <div className=" grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-10">
         {data?.Section3Card.map((c) => (
           <div
             className=" shadow-sm rounded-[8px] flex flex-col justify-center gap-[10px] p-6 h-[200px]"
