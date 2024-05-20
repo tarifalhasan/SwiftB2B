@@ -22,6 +22,10 @@ const config = {
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
       },
+
+      backgroundImage: {
+        s7: "linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, #F0F5FA 50%)",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -53,10 +57,12 @@ const config = {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",
         },
+
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        "SwiftB2b-blue": "#0F3D99",
       },
       borderRadius: {
         lg: "var(--radius)",

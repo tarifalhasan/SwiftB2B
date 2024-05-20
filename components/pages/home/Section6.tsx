@@ -19,16 +19,16 @@ interface Props {
 }
 
 const Section6 = ({ data }: { data: Props }) => {
-  console.dir(data, { depth: null });
+  //   console.dir(data, { depth: null });
   return (
     <section className="  relative py-6 xl:py-16  ">
-      <div className=" container  pt-11   relative z-20 px-2 mx-auto  space-y-7">
+      <div className=" container  pt-11   relative z-20 px-4 mx-auto  space-y-7">
         <div className=" max-w-[1076px] mx-auto">
           <h2 className=" leading-[142.857%] font-light text-white  text-4xl xl:text-5xl text-center">
             {data.title}
           </h2>
         </div>
-        <div className=" pt-20  xl:pt-[8rem] pb-14 grid grid-cols-4 gap-14">
+        <div className=" pt-20  xl:pt-[8rem] pb-14 grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-14">
           {data.Card.map((card) => (
             <div key={card.id} className=" space-y-6">
               <div>
@@ -36,7 +36,7 @@ const Section6 = ({ data }: { data: Props }) => {
                   {card.id < 10 && 0}
                   {card.id}
                 </h2>
-                <h2 className=" text-[40px] leading-none text-white font-bold">
+                <h2 className=" text-2xl lg:text-[40px] leading-none text-white font-bold">
                   {card.title}
                 </h2>
               </div>

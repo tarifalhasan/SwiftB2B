@@ -2,6 +2,7 @@ import { unstable_noStore as noStore } from "next/cache";
 import qs from "qs";
 
 import { flattenAttributes, getStrapiURL } from "@/lib/utils";
+import { title } from "process";
 
 const baseUrl = getStrapiURL();
 
@@ -43,6 +44,18 @@ export async function getHomePageData() {
               },
             },
           },
+          ImageCard: {
+            populate: {
+              image: {
+                fields: ["url", "alternativeText"],
+              },
+            },
+          },
+          Section8Tags: {
+            populate: {
+              title,
+            },
+          },
           BackgroundImage: {
             fields: ["url", "alternativeText"],
           },
@@ -53,7 +66,17 @@ export async function getHomePageData() {
               },
             },
           },
+          Section7Tags: {
+            populate: {},
+          },
           PeopleCard: {
+            populate: {
+              image: {
+                fields: ["url", "alternativeText"],
+              },
+            },
+          },
+          HowWeEngage: {
             populate: {
               image: {
                 fields: ["url", "alternativeText"],

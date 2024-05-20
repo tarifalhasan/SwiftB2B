@@ -38,7 +38,7 @@ const Section4 = ({ data }: { data: Props }) => {
       style={{
         backgroundImage: `url(${BackgroundImage.url})`,
       }}
-      className=" relative min-h-screen bg-no-repeat bg-cover w-full h-full"
+      className=" relative  bg-no-repeat bg-cover w-full h-full"
     >
       <StrapiImage
         alt="Background"
