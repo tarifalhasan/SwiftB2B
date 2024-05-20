@@ -29,7 +29,7 @@ interface Props {
 }
 
 const Section4 = ({ data }: { data: Props }) => {
-  console.dir(data, { depth: null });
+  // console.dir(data, { depth: null });
 
   const { id, BackgroundImage, title, description, PeopleCard } = data;
 
