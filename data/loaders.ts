@@ -56,6 +56,32 @@ export async function getHomePageData() {
               title,
             },
           },
+          ContacUs: {
+            populate: {
+              title,
+              ContactPerson: {
+                populate: {
+                  name: title,
+                },
+              },
+            },
+          },
+          FooterColumn1: {
+            populate: {
+              liinkHref: title,
+              logo: {
+                fields: ["url", "alternativeText"],
+              },
+            },
+          },
+          SocialLinks: {
+            populate: {
+              liinkHref: title,
+              icon: {
+                fields: ["url", "alternativeText"],
+              },
+            },
+          },
           BackgroundImage: {
             fields: ["url", "alternativeText"],
           },

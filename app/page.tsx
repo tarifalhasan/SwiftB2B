@@ -1,3 +1,4 @@
+import Footer from "@/components/header/footer";
 import Section1 from "@/components/pages/home/Section1";
 import Section2 from "@/components/pages/home/Section2";
 import Section3 from "@/components/pages/home/Section3";
@@ -27,6 +28,8 @@ function blockRenderer(block: any) {
       return <Section7 key={block.id} data={block} />;
     case "layout.section-8":
       return <Section8 key={block.id} data={block} />;
+    case "layout.footer":
+      return <Footer key={block.id} data={block} />;
     default:
       return null;
   }

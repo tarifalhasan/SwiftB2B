@@ -95,12 +95,12 @@ const Section4 = ({ data }: { data: Props }) => {
                 {title}
               </h2>
             </div>
-            <p className=" text-[#2F333D] text-center text-base xl:text-2xl">
-              {description}
+            <div className=" text-[#2F333D] text-center text-base xl:text-2xl">
+              <p> {description}</p>
               <p className=" font-bold pt-2">
                 25 year on, we have set out to….
               </p>
-            </p>
+            </div>
           </div>
         </div>
       </div>

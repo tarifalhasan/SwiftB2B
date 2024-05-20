@@ -28,7 +28,7 @@ interface Props {
 }
 
 const Section8 = ({ data }: { data: Props }) => {
-  console.dir(data, { depth: null });
+  // console.dir(data, { depth: null });
   return (
     <section
       className=" py-16 border-b border-white"
