@@ -3,6 +3,7 @@ import Section2 from "@/components/pages/home/Section2";
 import Section3 from "@/components/pages/home/Section3";
 import Section4 from "@/components/pages/home/Section4";
 import Section5 from "@/components/pages/home/Section5";
+import Section6 from "@/components/pages/home/Section6";
 
 import { getHomePageData } from "@/data/loaders";
 
@@ -18,6 +19,8 @@ function blockRenderer(block: any) {
       return <Section4 key={block.id} data={block} />;
     case "layout.section-5":
       return <Section5 key={block.id} data={block} />;
+    case "layout.section-6":
+      return <Section6 key={block.id} data={block} />;
     default:
       return null;
   }

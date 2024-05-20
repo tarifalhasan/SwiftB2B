@@ -13,7 +13,7 @@ interface Props {
 import { StrapiImage } from "@/components/StrapiImage";
 
 const Section5 = ({ data }: { data: Props }) => {
-  console.dir(data, { depth: null });
+  //   console.dir(data, { depth: null });
   return (
     <section className=" py-6 xl:py-16 space-y-12 container">
       <div className=" max-w-[774px] mx-auto  space-y-7">
