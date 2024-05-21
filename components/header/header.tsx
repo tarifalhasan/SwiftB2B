@@ -60,7 +60,7 @@ const SiteHeader = () => {
         <HiOutlineMenuAlt2
           size={25}
           color="#fff"
-          className=" lg:hidden cursor-pointer"
+          className="lg:hidden cursor-pointer"
         />
         <ul className=" hidden lg:flex items-center gap-x-6">
           <li>

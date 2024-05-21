@@ -19,7 +19,7 @@ interface HeroSectionProps {
 
 const Section1 = ({ data }: Readonly<HeroSectionProps>) => {
   return (
-    <section className=" z-20 relative  min-h-screen bg-cover bg-no-repeat bg-center overflow-hidden flex items-center">
+    <section className=" z-20 relative bg-blend-multiply  min-h-screen bg-cover bg-no-repeat bg-center  flex items-center">
       <StrapiImage
         alt="Background"
         className="absolute inset-0 object-cover w-full h-full"

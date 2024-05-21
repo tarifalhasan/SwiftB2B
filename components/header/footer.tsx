@@ -45,7 +45,7 @@ interface Footer {
 }
 
 const Footer = ({ data }: { data: Footer }) => {
-  console.dir(data, { depth: null });
+  //   console.dir(data, { depth: null });
   return (
     <footer
       style={{
@@ -101,7 +101,10 @@ const Footer = ({ data }: { data: Footer }) => {
               </Link>
             </li>
             <li>
-              <Link href={"/"} className=" text-xs font-normal text-white">
+              <Link
+                href={"/terms-and-conditions"}
+                className=" text-xs font-normal text-white"
+              >
                 Terms & Conditions
               </Link>
             </li>{" "}

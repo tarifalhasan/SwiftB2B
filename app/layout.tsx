@@ -2,6 +2,7 @@ import "@/styles/globals.css";
 import { Poppins as FontSans } from "next/font/google";
 
 import SiteHeader from "@/components/header/header";
+import { Toaster } from "@/components/ui/toaster";
 import { cn } from "@/lib/utils";
 import { ReactNode } from "react";
 
@@ -27,6 +28,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       >
         <SiteHeader />
         {children}
+        <Toaster />
       </body>
     </html>
   );

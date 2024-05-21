@@ -1,5 +1,5 @@
+import HowWeEngageModal from "@/components/HowWeEngageModal";
 import { StrapiImage } from "@/components/StrapiImage";
-import { Button } from "@/components/ui/button";
 
 interface Props {
   id: number;
@@ -102,13 +102,7 @@ const Section7 = ({ data }: { data: Props }) => {
                 {data.HowWeEngage.description}
               </p>
               <div className=" pt-[calc(40px-24px)]">
-                <Button
-                  size={"lg"}
-                  className=" rounded-full"
-                  variant={"primary"}
-                >
-                  Start Now !
-                </Button>
+                <HowWeEngageModal />
               </div>
             </div>
           </div>

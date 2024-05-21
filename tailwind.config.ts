@@ -34,7 +34,7 @@ const config = {
         foreground: "hsl(var(--foreground))",
         header: "rgba(0, 0, 0, 0.40)",
         primary: {
-          DEFAULT: "hsla(var(--primary))",
+          DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {

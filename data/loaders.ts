@@ -116,6 +116,43 @@ export async function getHomePageData() {
 
   return await fetchData(url.href);
 }
+export async function getTermsConditionPageData() {
+  noStore();
+  const url = new URL("/api/terms-and-condition", baseUrl);
+
+  url.search = qs.stringify({
+    populate: {
+      blocks: {
+        populate: {
+          TermsConditionHero: {
+            populate: {
+              title,
+              image: {
+                fields: ["url", "alternativeText"],
+              },
+            },
+          },
+          TermsConditionContentBlocks: {
+            populate: {
+              title,
+              description: title,
+            },
+          },
+          TableoFContents: {
+            populate: {
+              title,
+              icon: {
+                fields: ["url", "alternativeText"],
+              },
+            },
+          },
+        },
+      },
+    },
+  });
+
+  return await fetchData(url.href);
+}
 
 export async function getGlobalPageData() {
   noStore();
