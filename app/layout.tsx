@@ -3,6 +3,7 @@ import { Poppins as FontSans } from "next/font/google";
 
 import SiteHeader from "@/components/header/header";
 import { Toaster } from "@/components/ui/toaster";
+import { getTermsHeaderPageData } from "@/data/loaders";
 import { cn } from "@/lib/utils";
 import { ReactNode } from "react";
 
@@ -16,7 +17,30 @@ interface RootLayoutProps {
   children: ReactNode;
 }
 
-export default function RootLayout({ children }: RootLayoutProps) {
+interface LinkI {
+  id: number;
+  Label: string;
+  LinkHref: string;
+}
+interface HeaderPorps {
+  id: number;
+  __component: string;
+  logo: {
+    id: number;
+    url: string;
+    alternativeText: null | string;
+  };
+  Link: LinkI[];
+  Button: { id: number; Label: string; href: string };
+}
+
+export default async function RootLayout({ children }: RootLayoutProps) {
+  const strapiData = await getTermsHeaderPageData();
+
+  const { Header } = strapiData;
+
+  const headerData = Header[0] as HeaderPorps;
+
   return (
     <html lang="en" suppressHydrationWarning>
       <head />
@@ -26,7 +50,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           fontSans.variable
         )}
       >
-        <SiteHeader />
+        <SiteHeader data={headerData} />
         {children}
         <Toaster />
       </body>

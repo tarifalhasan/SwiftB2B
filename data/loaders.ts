@@ -154,6 +154,35 @@ export async function getTermsConditionPageData() {
   return await fetchData(url.href);
 }
 
+export async function getTermsHeaderPageData() {
+  noStore();
+  const url = new URL("/api/header", baseUrl);
+  url.search = qs.stringify({
+    populate: {
+      Header: {
+        populate: {
+          logo: {
+            fields: ["url", "alternativeText"],
+          },
+          Link: {
+            populate: {
+              Label: title,
+              LinkHref: title,
+            },
+          },
+          Button: {
+            populate: {
+              Label: title,
+              href: title,
+            },
+          },
+        },
+      },
+    },
+  });
+
+  return await fetchData(url.href);
+}
 export async function getGlobalPageData() {
   noStore();
 

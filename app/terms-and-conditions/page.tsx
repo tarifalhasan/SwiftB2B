@@ -50,7 +50,7 @@ const TermsAndConditions = async () => {
 
   const data = blocks[0] as TermsCondition;
 
-  console.dir(blocks, { depth: null });
+  // console.dir(blocks, { depth: null });
 
   return (
     <>
