@@ -1,6 +1,5 @@
 import { getStrapiMedia } from "@/lib/utils";
 import Image from "next/image";
-import { CSSProperties } from "react";
 
 interface StrapiImageProps {
   src: string;
@@ -8,7 +7,6 @@ interface StrapiImageProps {
   height: number;
   width: number;
   className?: string;
-  style?: CSSProperties;
 }
 
 export function StrapiImage({
@@ -17,7 +15,6 @@ export function StrapiImage({
   height,
   width,
   className,
-  style,
 }: Readonly<StrapiImageProps>) {
   if (!src) return null;
   const imageUrl = getStrapiMedia(src);
@@ -28,7 +25,6 @@ export function StrapiImage({
       src={imageUrl ?? imageFallback}
       alt={alt}
       height={height}
-      style={style}
       width={width}
       className={className}
     />

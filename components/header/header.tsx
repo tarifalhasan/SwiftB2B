@@ -25,7 +25,7 @@ interface HeaderPorps {
 }
 const SiteHeader: FC<HeaderPorps> = ({ data }) => {
   const links = data.Link;
-  console.dir(data, { depth: null });
+  // console.dir(data, { depth: null });
   return (
     <header className="  z-50 backdrop-blur-[50px] w-full bg-header  h-[72px] flex items-center fixed top-0 left-0 right-0   ">
       <div className=" container w-full flex items-center justify-between">
